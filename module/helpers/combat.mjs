@@ -51,7 +51,7 @@ export default class AlienRPGCombat extends foundry.documents.Combat {
 				updates.push({ _id: id, initiative: broll.total })
 
 				if (!game.settings.get("alienrpg", "alienrpgHideInitChat")) {
-					let cardPath = `<div style="text-align: center;"><img width="125" height="175" src="systems/alienrpg/images/cards/card-${broll.total}.png"></div>`
+					let cardPath = `<div style="text-align: center;"><img width="125" height="175" src="systems/alienrpg-homebrew/images/cards/card-${broll.total}.png"></div>`
 					// Determine the roll mode
 					const rollMode = messageOptions.rollMode || game.settings.get("core", "rollMode")
 					if (!combatant.token.hidden || !combatant.hidden) {

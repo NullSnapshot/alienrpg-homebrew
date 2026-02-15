@@ -353,7 +353,7 @@ Hooks.once("ready", async () => {
 	// Set turnmarker to the Alien symbol
 	if (game.settings.get("core", "combatTrackerConfig").turnMarker.src.length === 0) {
 		game.settings.set("core", "combatTrackerConfig", {
-			turnMarker: { src: "systems/alienrpg/images/paused-alien.png" },
+			turnMarker: { src: "systems/alienrpg-homebrew/images/paused-aquila.png" },
 		})
 	}
 	// addSlowAndFastActions();
@@ -362,7 +362,7 @@ Hooks.once("ready", async () => {
 Hooks.on("renderGamePause", (_app, html, options) => {
 	// Hooks.on('pauseGame', (_app, html, options) => {
 	document.getElementById("pause").innerHTML =
-		`<img src="systems/alienrpg/images/paused-alien.png" class="fa-spin"><figcaption>GAME PAUSED</figcaption>`
+		`<img src="systems/alienrpg-homebrew/images/paused-aquila.png" class="fa-spin"><figcaption>GAME PAUSED</figcaption>`
 })
 
 Hooks.on("preCreateToken", async (document, tokenData, options, userID) => {
@@ -410,12 +410,12 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 	dice3d.addDicePreset({
 		type: "db",
 		labels: [
-			"systems/alienrpg/ui/DsN/alien-dice-b0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-b0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-b0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-b0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-b0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-b6.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b6.png",
 		],
 		colorset: "AlienBlack",
 		system: "alienrpg",
@@ -423,12 +423,12 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 	dice3d.addDicePreset({
 		type: "ds",
 		labels: [
-			"systems/alienrpg/ui/DsN/alien-dice-y1.png",
-			"systems/alienrpg/ui/DsN/alien-dice-y0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-y0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-y0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-y0.png",
-			"systems/alienrpg/ui/DsN/alien-dice-y6.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y1.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y0.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y6.png",
 		],
 		colorset: "yellow",
 		system: "alienrpg",
@@ -438,12 +438,12 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 	dice3d.addDicePreset({
 		type: "db",
 		labels: [
-			"systems/alienrpg/ui/DsN/b1.png",
-			"systems/alienrpg/ui/DsN/b2.png",
-			"systems/alienrpg/ui/DsN/b3.png",
-			"systems/alienrpg/ui/DsN/b4.png",
-			"systems/alienrpg/ui/DsN/b5.png",
-			"systems/alienrpg/ui/DsN/alien-dice-b6.png",
+			"systems/alienrpg-homebrew/ui/DsN/b1.png",
+			"systems/alienrpg-homebrew/ui/DsN/b2.png",
+			"systems/alienrpg-homebrew/ui/DsN/b3.png",
+			"systems/alienrpg-homebrew/ui/DsN/b4.png",
+			"systems/alienrpg-homebrew/ui/DsN/b5.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b6.png",
 		],
 		colorset: "AlienBlack",
 		system: "alienrpgf",
@@ -451,12 +451,12 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 	dice3d.addDicePreset({
 		type: "ds",
 		labels: [
-			"systems/alienrpg/ui/DsN/alien-dice-y1.png",
-			"systems/alienrpg/ui/DsN/y2.png",
-			"systems/alienrpg/ui/DsN/y3.png",
-			"systems/alienrpg/ui/DsN/y4.png",
-			"systems/alienrpg/ui/DsN/y5.png",
-			"systems/alienrpg/ui/DsN/alien-dice-y6.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y1.png",
+			"systems/alienrpg-homebrew/ui/DsN/y2.png",
+			"systems/alienrpg-homebrew/ui/DsN/y3.png",
+			"systems/alienrpg-homebrew/ui/DsN/y4.png",
+			"systems/alienrpg-homebrew/ui/DsN/y5.png",
+			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y6.png",
 		],
 		colorset: "yellow",
 		system: "alienrpgf",

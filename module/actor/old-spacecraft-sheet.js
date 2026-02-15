@@ -24,7 +24,7 @@ export class alienrpgSpacecraftSheet extends foundry.appv1.sheets.ActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["alienrpg", "sheet", "actor", "spacecraft-sheet"],
-			// template: 'systems/alienrpg/templates/actor/actor-sheet.html',
+			// template: 'systems/alienrpg-homebrew/templates/actor/actor-sheet.html',
 			width: 1120,
 			height: 800,
 			tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }],
@@ -32,11 +32,11 @@ export class alienrpgSpacecraftSheet extends foundry.appv1.sheets.ActorSheet {
 	}
 
 	get template() {
-		const path = "systems/alienrpg/templates/actor/"
+		const path = "systems/alienrpg-homebrew/templates/actor/"
 		// return `${path}actor-sheet.html`;
 		// unique item sheet by type, like `weapon-sheet.html`.
 		// if (game.settings.get('alienrpg', 'aliencrt')) {
-		// 	return `systems/alienrpg/templates/actor/crt/${this.actor.type}-sheet.html`;
+		// 	return `systems/alienrpg-homebrew/templates/actor/crt/${this.actor.type}-sheet.html`;
 		// } else {
 		return `${path}${this.actor.type}-sheet.html`
 		// }
@@ -741,7 +741,7 @@ export class alienrpgSpacecraftSheet extends foundry.appv1.sheets.ActorSheet {
 
 		// Now push the correct chat message
 		const html = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/chat/ship-combat.html",
+			"systems/alienrpg-homebrew/templates/chat/ship-combat.html",
 			htmlData,
 		)
 

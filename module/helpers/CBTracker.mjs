@@ -66,7 +66,7 @@ export default class AlienRPGCTContext extends foundry.applications.sidebar.tabs
 					const combatant = this.viewed.combatants.get(li.dataset.combatantId)
 					const donerInit = combatant.initiative
 					const combatants = game.combat.combatants
-					const template = "systems/alienrpg/templates/dialog/switch-initiative.html"
+					const template = "systems/alienrpg-homebrew/templates/dialog/switch-initiative.html"
 					await _swapInitiative(combatant, donerInit, combatants, template)
 				},
 			},

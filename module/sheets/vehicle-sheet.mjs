@@ -54,7 +54,7 @@ export default class alienrpgVehicleSheet extends api.HandlebarsApplicationMixin
 	/** @override */
 	static PARTS = {
 		vehicleheader: {
-			template: "systems/alienrpg/templates/actor/vehicle-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/vehicle-header.hbs",
 		},
 
 		tabs: {
@@ -62,30 +62,30 @@ export default class alienrpgVehicleSheet extends api.HandlebarsApplicationMixin
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		vehiclegeneral: {
-			template: "systems/alienrpg/templates/actor/vehicle-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/vehicle-general.hbs",
 			scrollable: [""],
 		},
 		crew: {
-			template: "systems/alienrpg/templates/actor/vehicle-crew.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/vehicle-crew.hbs",
 			scrollable: [""],
 		},
 		inventory: {
-			template: "systems/alienrpg/templates/actor/vehicle-inventory.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/vehicle-inventory.hbs",
 			scrollable: [""],
 		},
 		// crtuisyntheticheader: {
-		// 	template: "systems/alienrpg/templates/actor/crt/crtui-synthetic-header.hbs",
+		// 	template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-synthetic-header.hbs",
 		// },
 		// crtuisyntheticgeneral: {
-		// 	template: "systems/alienrpg/templates/actor/crt/crtui-synthetic-general.hbs",
+		// 	template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-synthetic-general.hbs",
 		// 	scrollable: [""],
 		// },
 		// crtuicharacterskills: {
-		// 	template: "systems/alienrpg/templates/actor/crt/crtui-character-skills.hbs",
+		// 	template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-character-skills.hbs",
 		// 	scrollable: [""],
 		// },
 		// crtuicharacterinventory: {
-		// 	template: "systems/alienrpg/templates/actor/crt/crtui-character-inventory.hbs",
+		// 	template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-character-inventory.hbs",
 		// 	scrollable: [""],
 		// },
 	}

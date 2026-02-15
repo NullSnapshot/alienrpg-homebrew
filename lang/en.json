@@ -25,16 +25,22 @@
       "Wis": {
         "abbr": "wis",
         "long": "Wisdom"
+      },
+      "Psy": {
+        "abbr": "psy",
+        "long": "psychic aptitude"
       }
     },
     "AbilityAbbagl": "agl",
     "AbilityAbbemp": "emp",
     "AbilityAbbstr": "str",
     "AbilityAbbwit": "wit",
+    "AbilityAbbpsy": "psy",
     "AbilityAgl": "Agility",
     "AbilityEmp": "Empathy",
     "AbilityStr": "Strength",
     "AbilityWit": "Wits",
+    "AbilityPsy": "Psyk",
     "accelerate": "Accelerate",
     "AcidAttack": "Acid Blood",
     "AcidBlood": "This Creature does not have Acid Blood",

@@ -43,59 +43,59 @@ export default class alienrpgItemSheet extends api.HandlebarsApplicationMixin(sh
 	/** @override */
 	static PARTS = {
 		header: {
-			template: "systems/alienrpg/templates/item/item-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-header.hbs",
 		},
 		tabs: {
 			// Foundry-provided generic template
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		notes: {
-			template: "systems/alienrpg/templates/item/item-notes.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-notes.hbs",
 		},
 		modifiers: {
-			template: "systems/alienrpg/templates/item/item-modifiers.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-modifiers.hbs",
 		},
 		general: {
-			template: "systems/alienrpg/templates/item/item-sheet.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-sheet.hbs",
 		},
 		weapon: {
-			template: "systems/alienrpg/templates/item/item-weapon.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-weapon.hbs",
 		},
 		"skill-stunts": {
-			template: "systems/alienrpg/templates/item/item-skill-stunts.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-skill-stunts.hbs",
 		},
 		"critical-injury": {
-			template: "systems/alienrpg/templates/item/item-crit-inj.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-crit-inj.hbs",
 		},
 		talent: {
-			template: "systems/alienrpg/templates/item/item-talent.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-talent.hbs",
 		},
 		agenda: {
-			template: "systems/alienrpg/templates/item/item-agenda.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-agenda.hbs",
 		},
 		armor: {
-			template: "systems/alienrpg/templates/item/item-armor.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-armor.hbs",
 		},
 		specialty: {
-			template: "systems/alienrpg/templates/item/item-specialty.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-specialty.hbs",
 		},
 		spacecraftweapons: {
-			template: "systems/alienrpg/templates/item/item-spacecraftweapons.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-spacecraftweapons.hbs",
 		},
 		spacecraftmods: {
-			template: "systems/alienrpg/templates/item/item-spacecraftmods.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-spacecraftmods.hbs",
 		},
 		"spacecraft-crit": {
-			template: "systems/alienrpg/templates/item/item-spacecraft-crit.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-spacecraft-crit.hbs",
 		},
 		"planet-system": {
-			template: "systems/alienrpg/templates/item/item-planet-system.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-planet-system.hbs",
 		},
 		"planet-description": {
-			template: "systems/alienrpg/templates/item/item-planet-description.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-planet-description.hbs",
 		},
 		"colony-initiative": {
-			template: "systems/alienrpg/templates/item/item-colony-initiative.hbs",
+			template: "systems/alienrpg-homebrew/templates/item/item-colony-initiative.hbs",
 		},
 	}
 
@@ -202,44 +202,44 @@ export default class alienrpgItemSheet extends api.HandlebarsApplicationMixin(sh
 	}
 
 	async _prepareSystemData(data) {
-		this.item.update({ img: "systems/alienrpg/images/icons/solar-system.webp" })
+		this.item.update({ img: "systems/alienrpg-homebrew/images/icons/solar-system.webp" })
 	}
 	async _prepareAgendaData(data) {
 		if (this.item.img === "icons/svg/item-bag.svg" && this.item.img !== this.img) {
-			this.item.update({ img: "systems/alienrpg/images/icons/personal-agenda.png" })
+			this.item.update({ img: "systems/alienrpg-homebrew/images/icons/personal-agenda.png" })
 		}
 	}
 
 	async _prepareSpecialtyData(data) {
-		this.item.update({ img: "systems/alienrpg/images/icons/cover-notext.png" })
+		this.item.update({ img: "systems/alienrpg-homebrew/images/icons/cover-notext.png" })
 	}
 
 	async _prepareTalentData(data) {
 		if (data.system.general.career.value === "0" || data.system.general.career.value === "") {
-			this.item.update({ img: "systems/alienrpg/images/icons/sprint.webp" })
+			this.item.update({ img: "systems/alienrpg-homebrew/images/icons/sprint.webp" })
 		} else {
-			this.item.update({ img: "systems/alienrpg/images/icons/fire-dash.webp" })
+			this.item.update({ img: "systems/alienrpg-homebrew/images/icons/fire-dash.webp" })
 		}
 	}
 
 	async _prepareShipCritData(data) {
 		if (data.system.header.type.value === "1") {
-			this.item.update({ img: "systems/alienrpg/images/icons/auto-repair.webp" })
+			this.item.update({ img: "systems/alienrpg-homebrew/images/icons/auto-repair.webp" })
 		} else if (data.system.header.type.value === "0") {
-			this.item.update({ img: "systems/alienrpg/images/icons/spanner.webp" })
+			this.item.update({ img: "systems/alienrpg-homebrew/images/icons/spanner.webp" })
 		}
 	}
 
 	async _prepareColonyInitiativeData(item) {
 		switch (item.system.header.type) {
 			case "1":
-				item.update({ img: "systems/alienrpg/images/icons/full-folder.webp" })
+				item.update({ img: "systems/alienrpg-homebrew/images/icons/full-folder.webp" })
 				break
 			case "2":
-				item.update({ img: "systems/alienrpg/images/icons/habitat-dome.webp" })
+				item.update({ img: "systems/alienrpg-homebrew/images/icons/habitat-dome.webp" })
 				break
 			case "3":
-				item.update({ img: "systems/alienrpg/images/icons/diagram.webp" })
+				item.update({ img: "systems/alienrpg-homebrew/images/icons/diagram.webp" })
 				break
 
 			default:

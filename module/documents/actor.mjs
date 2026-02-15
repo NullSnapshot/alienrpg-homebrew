@@ -20,13 +20,13 @@ export class alienrpgActor extends Actor {
 		super.prepareData()
 		switch (this.type) {
 			case "territory":
-				this.img = "systems/alienrpg/images/icons/nested-eclipses.webp"
+				this.img = "systems/alienrpg-homebrew/images/icons/nested-eclipses.webp"
 				break
 			case "colony":
-				this.img = "systems/alienrpg/images/icons/digital-trace.webp"
+				this.img = "systems/alienrpg-homebrew/images/icons/digital-trace.webp"
 				break
 			case "planet":
-				this.img = "systems/alienrpg/images/icons/double-ringed-orb.webp"
+				this.img = "systems/alienrpg-homebrew/images/icons/double-ringed-orb.webp"
 				break
 
 			default:
@@ -97,8 +97,8 @@ export class alienrpgActor extends Actor {
 					break
 				case "territory":
 					tokenProto["prototypeToken.bar1"] = { attribute: "None" }
-					tokenProto["prototypeToken.img"] = "systems/alienrpg/images/icons/nested-eclipses.svg"
-					tokenProto["prototypeToken.texture.src"] = "systems/alienrpg/images/icons/nested-eclipses.webp"
+					tokenProto["prototypeToken.img"] = "systems/alienrpg-homebrew/images/icons/nested-eclipses.svg"
+					tokenProto["prototypeToken.texture.src"] = "systems/alienrpg-homebrew/images/icons/nested-eclipses.webp"
 					tokenProto["prototypeToken.sight.enabled"] = false
 					break
 				case "spacecraft":
@@ -108,15 +108,15 @@ export class alienrpgActor extends Actor {
 					break
 				case "colony":
 					tokenProto["prototypeToken.bar1"] = { attribute: "None" }
-					tokenProto["prototypeToken.img"] = "systems/alienrpg/images/icons/digital-trace.webp"
-					tokenProto["prototypeToken.texture.src"] = "systems/alienrpg/images/icons/digital-trace.webp"
+					tokenProto["prototypeToken.img"] = "systems/alienrpg-homebrew/images/icons/digital-trace.webp"
+					tokenProto["prototypeToken.texture.src"] = "systems/alienrpg-homebrew/images/icons/digital-trace.webp"
 					tokenProto["prototypeToken.disposition"] = CONST.TOKEN_DISPOSITIONS.NEUTRAL
 					tokenProto["prototypeToken.sight.enabled"] = false
 					break
 				case "planet":
 					tokenProto["prototypeToken.bar1"] = { attribute: "None" }
-					tokenProto["prototypeToken.img"] = "systems/alienrpg/images/icons/double-ringed-orb.webp"
-					tokenProto["prototypeToken.texture.src"] = "systems/alienrpg/images/icons/double-ringed-orb.webp"
+					tokenProto["prototypeToken.img"] = "systems/alienrpg-homebrew/images/icons/double-ringed-orb.webp"
+					tokenProto["prototypeToken.texture.src"] = "systems/alienrpg-homebrew/images/icons/double-ringed-orb.webp"
 					tokenProto["prototypeToken.disposition"] = CONST.TOKEN_DISPOSITIONS.NEUTRAL
 					tokenProto["prototypeToken.sight.enabled"] = false
 					break
@@ -287,7 +287,7 @@ export class alienrpgActor extends Actor {
 					" " +
 					game.i18n.localize("ALIENRPG.DialTitle2")
 				content = await foundry.applications.handlebars.renderTemplate(
-					"systems/alienrpg/templates/dialog/roll-attr-dialog.hbs",
+					"systems/alienrpg-homebrew/templates/dialog/roll-attr-dialog.hbs",
 					actor,
 					dataset,
 				)
@@ -328,7 +328,7 @@ export class alienrpgActor extends Actor {
 				}
 			} else if (actor.type === "spacecraft" && dataset.spbutt === "comtech") {
 				content = await foundry.applications.handlebars.renderTemplate(
-					"systems/alienrpg/templates/dialog/roll-space-comtech.hbs",
+					"systems/alienrpg-homebrew/templates/dialog/roll-space-comtech.hbs",
 					{ config, actor, dataset },
 				)
 				response = await foundry.applications.api.DialogV2.wait({
@@ -407,19 +407,19 @@ export class alienrpgActor extends Actor {
 				actor.system.header.synthstress
 			) {
 				content = await foundry.applications.handlebars.renderTemplate(
-					"systems/alienrpg/templates/dialog/roll-all-dialog.hbs",
+					"systems/alienrpg-homebrew/templates/dialog/roll-all-dialog.hbs",
 					actor,
 					dataset.dataset,
 				)
 			} else if (actor.type === "synthetic") {
 				content = await foundry.applications.handlebars.renderTemplate(
-					"systems/alienrpg/templates/dialog/roll-base-dialog.hbs",
+					"systems/alienrpg-homebrew/templates/dialog/roll-base-dialog.hbs",
 					actor,
 					dataset.dataset,
 				)
 			} else {
 				content = await foundry.applications.handlebars.renderTemplate(
-					"systems/alienrpg/templates/dialog/roll-base-dialog.hbs",
+					"systems/alienrpg-homebrew/templates/dialog/roll-base-dialog.hbs",
 					actor,
 					dataset.dataset,
 				)
@@ -684,14 +684,14 @@ export class alienrpgActor extends Actor {
 				") </i></b></h4>"
 		}
 		if (customResults.roll.total >= 10) {
-			chatMessage += `<img src="systems/alienrpg/images/icons/warning-bar.webp" > `
+			chatMessage += `<img src="systems/alienrpg-homebrew/images/icons/warning-bar.webp" > `
 			chatMessage +=
 				`<h4 class="alienchatred" style="font-weight: bolder; margin-bottom: auto; margin-left:10px;"><b>` +
 				game.i18n.localize("ALIENRPG.ActionFailed") +
 				" " +
 				customResults.roll.total +
 				"</b></h4>"
-			chatMessage += `<img src="systems/alienrpg/images/icons/warning-bar.webp"> `
+			chatMessage += `<img src="systems/alienrpg-homebrew/images/icons/warning-bar.webp"> `
 		}
 
 		const rollMode = game.settings.get("core", "rollMode")
@@ -752,7 +752,7 @@ export class alienrpgActor extends Actor {
 					if (!actor.items.getName(agilityModName)) {
 						const rollData = {
 							type: "item",
-							img: "systems/alienrpg/images/panic.webp",
+							img: "systems/alienrpg-homebrew/images/panic.webp",
 							name: agilityModName,
 							"system.header.type.value": 5,
 							"system.attributes.comment.value": game.i18n.localize("ALIENRPG.Panic8"),
@@ -799,7 +799,7 @@ export class alienrpgActor extends Actor {
 	async rollPanicMod(actor, dataset) {
 		const config = CONFIG.ALIENRPG
 		const content = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/dialog/roll-stress-dialog.hbs",
+			"systems/alienrpg-homebrew/templates/dialog/roll-stress-dialog.hbs",
 			actor,
 			dataset.dataset,
 		)
@@ -1050,7 +1050,7 @@ export class alienrpgActor extends Actor {
 		}
 
 		const html = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/chat/stress-response-roll.hbs",
+			"systems/alienrpg-homebrew/templates/chat/stress-response-roll.hbs",
 			htmlData,
 		)
 		const chatData = {
@@ -1070,7 +1070,7 @@ export class alienrpgActor extends Actor {
 	async rollResolveMod(actor, dataset) {
 		const config = CONFIG.ALIENRPG
 		const content = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/dialog/roll-resolve-dialog.hbs",
+			"systems/alienrpg-homebrew/templates/dialog/roll-resolve-dialog.hbs",
 			actor,
 			dataset.dataset,
 		)
@@ -1293,7 +1293,7 @@ export class alienrpgActor extends Actor {
 		}
 
 		const html = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/chat/panic-response-roll.hbs",
+			"systems/alienrpg-homebrew/templates/chat/panic-response-roll.hbs",
 			htmlData,
 		)
 		const chatData = {
@@ -1314,7 +1314,7 @@ export class alienrpgActor extends Actor {
 	async rollStressMod(actor, dataset) {
 		const config = CONFIG.ALIENRPG
 		const content = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/dialog/roll-stress-dialog.hbs",
+			"systems/alienrpg-homebrew/templates/dialog/roll-stress-dialog.hbs",
 			actor,
 			dataset.dataset,
 		)
@@ -2051,7 +2051,7 @@ export class alienrpgActor extends Actor {
 
 		// console.log(htmlData);
 		const html = await foundry.applications.handlebars.renderTemplate(
-			`systems/alienrpg/templates/chat/crit-roll-${actor.type}.hbs`,
+			`systems/alienrpg-homebrew/templates/chat/crit-roll-${actor.type}.hbs`,
 			htmlData,
 		)
 		const chatData = {
@@ -2097,7 +2097,7 @@ export class alienrpgActor extends Actor {
 			case "character":
 				{
 					content = await foundry.applications.handlebars.renderTemplate(
-						"systems/alienrpg/templates/dialog/roll-char-manual-crit-dialog.hbs",
+						"systems/alienrpg-homebrew/templates/dialog/roll-char-manual-crit-dialog.hbs",
 						actor,
 						dataset.dataset,
 					)
@@ -2107,7 +2107,7 @@ export class alienrpgActor extends Actor {
 			case "creature":
 				{
 					content = await foundry.applications.handlebars.renderTemplate(
-						"systems/alienrpg/templates/dialog//roll-syn-manual-crit-dialog.hbs",
+						"systems/alienrpg-homebrew/templates/dialog//roll-syn-manual-crit-dialog.hbs",
 						actor,
 						dataset.dataset,
 					)
@@ -2117,13 +2117,13 @@ export class alienrpgActor extends Actor {
 				{
 					if (dataset.crbut === "minor") {
 						content = await foundry.applications.handlebars.renderTemplate(
-							"systems/alienrpg/templates/dialog/roll-spacecraft-minor-crit-dialog.hbs",
+							"systems/alienrpg-homebrew/templates/dialog/roll-spacecraft-minor-crit-dialog.hbs",
 							actor,
 							dataset.dataset,
 						)
 					} else {
 						content = await foundry.applications.handlebars.renderTemplate(
-							"systems/alienrpg/templates/roll-spacecraft-major-crit-dialog.hbs",
+							"systems/alienrpg-homebrew/templates/roll-spacecraft-major-crit-dialog.hbs",
 							actor,
 							dataset.dataset,
 						)

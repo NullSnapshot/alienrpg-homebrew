@@ -57,13 +57,13 @@ export class alienrpgActor extends Actor {
 	_prepareVehicleData(data) {}
 	_prepareCreatureData(actorData) {}
 	_prepareTeritoryData(data) {
-		this.img = 'systems/alienrpg/images/icons/nested-eclipses.webp';
+		this.img = 'systems/alienrpg-homebrew/images/icons/nested-eclipses.webp';
 	}
 	_prepareColonyData(data) {
-		this.img = 'systems/alienrpg/images/icons/digital-trace.webp';
+		this.img = 'systems/alienrpg-homebrew/images/icons/digital-trace.webp';
 	}
 	_preparePlanetData(data) {
-		this.img = 'systems/alienrpg/images/icons/double-ringed-orb.webp';
+		this.img = 'systems/alienrpg-homebrew/images/icons/double-ringed-orb.webp';
 	}
 
 	_prepareTokenImg() {
@@ -108,8 +108,8 @@ export class alienrpgActor extends Actor {
 					break;
 				case 'territory':
 					tokenProto['prototypeToken.bar1'] = { attribute: 'None' };
-					tokenProto['prototypeToken.img'] = 'systems/alienrpg/images/icons/nested-eclipses.svg';
-					tokenProto['prototypeToken.texture.src'] = 'systems/alienrpg/images/icons/nested-eclipses.webp';
+					tokenProto['prototypeToken.img'] = 'systems/alienrpg-homebrew/images/icons/nested-eclipses.svg';
+					tokenProto['prototypeToken.texture.src'] = 'systems/alienrpg-homebrew/images/icons/nested-eclipses.webp';
 					tokenProto['prototypeToken.sight.enabled'] = false;
 					break;
 				case 'spacecraft':
@@ -117,15 +117,15 @@ export class alienrpgActor extends Actor {
 					break;
 				case 'colony':
 					tokenProto['prototypeToken.bar1'] = { attribute: 'None' };
-					tokenProto['prototypeToken.img'] = 'systems/alienrpg/images/icons/digital-trace.webp';
-					tokenProto['prototypeToken.texture.src'] = 'systems/alienrpg/images/icons/digital-trace.webp';
+					tokenProto['prototypeToken.img'] = 'systems/alienrpg-homebrew/images/icons/digital-trace.webp';
+					tokenProto['prototypeToken.texture.src'] = 'systems/alienrpg-homebrew/images/icons/digital-trace.webp';
 					tokenProto['prototypeToken.disposition'] = CONST.TOKEN_DISPOSITIONS.NEUTRAL;
 					tokenProto['prototypeToken.sight.enabled'] = false;
 					break;
 				case 'planet':
 					tokenProto['prototypeToken.bar1'] = { attribute: 'None' };
-					tokenProto['prototypeToken.img'] = 'systems/alienrpg/images/icons/double-ringed-orb.webp';
-					tokenProto['prototypeToken.texture.src'] = 'systems/alienrpg/images/icons/double-ringed-orb.webp';
+					tokenProto['prototypeToken.img'] = 'systems/alienrpg-homebrew/images/icons/double-ringed-orb.webp';
+					tokenProto['prototypeToken.texture.src'] = 'systems/alienrpg-homebrew/images/icons/double-ringed-orb.webp';
 					tokenProto['prototypeToken.disposition'] = CONST.TOKEN_DISPOSITIONS.NEUTRAL;
 					tokenProto['prototypeToken.sight.enabled'] = false;
 					break;
@@ -332,7 +332,7 @@ export class alienrpgActor extends Actor {
 
 				if (dataset.roll) {
 					if (actor.type === 'character') {
-						myRenderTemplate('systems/alienrpg/templates/dialog/roll-attr-dialog.html');
+						myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-attr-dialog.html');
 					}
 				}
 			} else if (actor.type === 'spacecraft' && dataset.spbutt === 'comtech') {
@@ -383,7 +383,7 @@ export class alienrpgActor extends Actor {
 						}).render(true);
 					});
 				}
-				myRenderTemplate('systems/alienrpg/templates/dialog/spacecomtech.html');
+				myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/spacecomtech.html');
 			} else {
 				yze.yzeRoll(effectiveActorType, blind, reRoll, label, r1Data, game.i18n.localize('ALIENRPG.Black'), r2Data, game.i18n.localize('ALIENRPG.Yellow'), actorId);
 				game.alienrpg.rollArr.sCount = game.alienrpg.rollArr.r1Six + game.alienrpg.rollArr.r2Six;
@@ -505,14 +505,14 @@ export class alienrpgActor extends Actor {
 					chatMessage += `<h4><b>` + game.i18n.localize('ALIENRPG.PermanantTrauma') + `<i>(` + game.i18n.localize('ALIENRPG.Seepage106') + `) </i></b></h4>`;
 				}
 				if (customResults.roll.total >= 10) {
-					chatMessage += `<img src="systems/alienrpg/images/icons/warning-bar.webp" > `;
+					chatMessage += `<img src="systems/alienrpg-homebrew/images/icons/warning-bar.webp" > `;
 					chatMessage +=
 						`<h4 class="alienchatred" style="font-weight: bolder; margin-bottom: auto; margin-left:10px;"><b>` +
 						game.i18n.localize('ALIENRPG.ActionFailed') +
 						` ` +
 						customResults.roll.total +
 						`</b></h4>`;
-					chatMessage += `<img src="systems/alienrpg/images/icons/warning-bar.webp"> `;
+					chatMessage += `<img src="systems/alienrpg-homebrew/images/icons/warning-bar.webp"> `;
 				}
 
 				let rollMode = game.settings.get('core', 'rollMode');
@@ -557,7 +557,7 @@ export class alienrpgActor extends Actor {
 							if (!actor.items.getName(allSkillsModName)) {
 								const rollData = {
 									type: 'item',
-									img: 'systems/alienrpg/images/panic.webp',
+									img: 'systems/alienrpg-homebrew/images/panic.webp',
 									name: allSkillsModName,
 									'system.header.type.value': 5,
 									'system.attributes.comment.value': game.i18n.localize('ALIENRPG.ShipPanic8'),
@@ -605,7 +605,7 @@ export class alienrpgActor extends Actor {
 							if (!actor.items.getName(agilityModName)) {
 								const rollData = {
 									type: 'item',
-									img: 'systems/alienrpg/images/panic.webp',
+									img: 'systems/alienrpg-homebrew/images/panic.webp',
 									name: agilityModName,
 									'system.header.type.value': 5,
 									'system.attributes.comment.value': game.i18n.localize('ALIENRPG.Panic8'),
@@ -821,16 +821,16 @@ export class alienrpgActor extends Actor {
 			// call pop up box here to get any mods then use standard RollAbility()
 			// Check that is a character (and not armor) or a synth pretending to be a character.
 			if (((actor.type === 'character' || actor.type === 'vehicles' || actor.type === 'spacecraft') && dataset.spbutt != 'armor') || actor.system.header.synthstress) {
-				myRenderTemplate('systems/alienrpg/templates/dialog/roll-all-dialog.html');
+				myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-all-dialog.html');
 			} else if (actor.type === 'synthetic') {
-				myRenderTemplate('systems/alienrpg/templates/dialog/roll-base-dialog.html');
+				myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-base-dialog.html');
 			} else {
-				myRenderTemplate('systems/alienrpg/templates/dialog/roll-base-dialog.html');
+				myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-base-dialog.html');
 			}
 		} else if (dataset.panicroll) {
 			// Roll against the panic table and push the roll to the chat log.
 
-			myRenderTemplate('systems/alienrpg/templates/dialog/roll-stress-dialog.html');
+			myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-stress-dialog.html');
 		}
 	}
 
@@ -1084,7 +1084,7 @@ export class alienrpgActor extends Actor {
 		}
 	}
 	async consumablesCheckMod(actor, consUme, label, tItem) {
-		const template = 'systems/alienrpg/templates/dialog/roll-supplymod-dialog.html';
+		const template = 'systems/alienrpg-homebrew/templates/dialog/roll-supplymod-dialog.html';
 		let confirmed = false;
 		let supplyModifier = 0;
 		foundry.applications.handlebars.renderTemplate(template).then((dlg) => {
@@ -1119,7 +1119,7 @@ export class alienrpgActor extends Actor {
 	}
 
 	async creatureAcidRoll(actor, dataset) {
-		let template = 'systems/alienrpg/templates/dialog/roll-base-xeno-dialog.html';
+		let template = 'systems/alienrpg-homebrew/templates/dialog/roll-base-xeno-dialog.html';
 		let label = dataset.label;
 		let r1Data = parseInt(dataset.roll || 0);
 		let r2Data = 0;
@@ -1267,7 +1267,7 @@ export class alienrpgActor extends Actor {
 				}).render(true);
 			});
 		}
-		myRenderTemplate('systems/alienrpg/templates/dialog/roll-manual-creature-attack-dialog.html');
+		myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-manual-creature-attack-dialog.html');
 	}
 
 	morePanic(pCheck) {
@@ -1656,7 +1656,7 @@ export class alienrpgActor extends Actor {
 		// Now push the correct chat message
 
 		// console.log(htmlData);
-		const html = await foundry.applications.handlebars.renderTemplate(`systems/alienrpg/templates/chat/crit-roll-${actor.type}.html`, htmlData);
+		const html = await foundry.applications.handlebars.renderTemplate(`systems/alienrpg-homebrew/templates/chat/crit-roll-${actor.type}.html`, htmlData);
 
 		let chatData = {
 			user: game.user.id,
@@ -1759,18 +1759,18 @@ export class alienrpgActor extends Actor {
 		}
 		switch (actor.type) {
 			case 'character':
-				myRenderTemplate('systems/alienrpg/templates/dialog/roll-char-manual-crit-dialog.html');
+				myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-char-manual-crit-dialog.html');
 
 				break;
 			case 'synthetic':
 			case 'creature':
-				myRenderTemplate('systems/alienrpg/templates/dialog/roll-syn-manual-crit-dialog.html');
+				myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-syn-manual-crit-dialog.html');
 				break;
 			case 'spacecraft':
 				if (dataset.crbut === 'minor') {
-					myRenderTemplate('systems/alienrpg/templates/dialog/roll-spacecraft-minor-crit-dialog.html');
+					myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-spacecraft-minor-crit-dialog.html');
 				} else {
-					myRenderTemplate('systems/alienrpg/templates/dialog/roll-spacecraft-major-crit-dialog.html');
+					myRenderTemplate('systems/alienrpg-homebrew/templates/dialog/roll-spacecraft-major-crit-dialog.html');
 				}
 
 				break;

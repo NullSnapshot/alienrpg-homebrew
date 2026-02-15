@@ -45,7 +45,7 @@ export default class alienrpgTerritorySheet extends api.HandlebarsApplicationMix
 	/** @override */
 	static PARTS = {
 		territoryheader: {
-			template: "systems/alienrpg/templates/actor/simple-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/simple-header.hbs",
 		},
 
 		tabs: {
@@ -53,11 +53,11 @@ export default class alienrpgTerritorySheet extends api.HandlebarsApplicationMix
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		territorygeneral: {
-			template: "systems/alienrpg/templates/actor/territory-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/territory-general.hbs",
 			scrollable: [""],
 		},
 		territorysystems: {
-			template: "systems/alienrpg/templates/actor/territory-systems.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/territory-systems.hbs",
 			scrollable: [""],
 		},
 	}

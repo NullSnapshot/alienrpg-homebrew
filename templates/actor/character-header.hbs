@@ -56,12 +56,17 @@
 				</h3>
 				<input type='text' class='maxboxsize gCol9' name='system.attributes.emp.value' value='{{system.attributes.emp.value}}' data-dtype='Number' />
 
+				<h3 class='resource-label rollable gCol5' data-action='RollAbility' data-attr='attribute' data-roll='{{system.attributes.psy.value}}' data-mod='{{system.attributes.psy.mod}}' data-label='{{localize "ALIENRPG.AbilityPsy"}}'>
+					{{localize 'ALIENRPG.AbilityPsy'}}
+				</h3>
+				<input type='text' class='maxboxsize gCol11' name='system.attributes.psy.value' value='{{system.attributes.psy.value}}' data-dtype='Number' />
+
 				{{#if isGM}}
 					<div class='tooltip'>
-						<h3 class='resource-label gCol5 tooltip'>NPC?</h3>
+						<h3 class='resource-label gCol10 tooltip'>NPC?</h3>
 						<span class='tooltiptext' style="font-family: 'Times New Roman', Times, serif">{{localize 'ALIENRPG.NPCpopUp'}}</span>
 					</div>
-					<input class='gCol10 NPC' name='system.header.npc' type='checkbox' {{checked system.header.npc}} />
+					<input class='gCol12 NPC' name='system.header.npc' type='checkbox' {{checked system.header.npc}} />
 				{{/if}}
 			</div>
 		</div>

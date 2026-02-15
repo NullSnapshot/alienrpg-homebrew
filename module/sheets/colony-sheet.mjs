@@ -51,12 +51,12 @@ export default class alienrpgColonySheet extends api.HandlebarsApplicationMixin(
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		colonygeneral: {
-			template: "systems/alienrpg/templates/actor/colony-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/colony-general.hbs",
 			scrollable: [""],
 		},
 
 		notes: {
-			template: "systems/alienrpg/templates/actor/notes.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/notes.hbs",
 			scrollable: [""],
 		},
 	}

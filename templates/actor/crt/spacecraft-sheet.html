@@ -212,16 +212,16 @@
 						</div>
 					</div>
 					<div class="box-top" style="overflow: auto">
-						{{> "systems/alienrpg/templates/actor/crt/tabs/sCraft-minor-crit.html" }}
+						{{> "systems/alienrpg-homebrew/templates/actor/crt/tabs/sCraft-minor-crit.html" }}
 					</div>
-					<div style="overflow: auto">{{> "systems/alienrpg/templates/actor/crt/tabs/sCraft-major-crit.html" }}</div>
+					<div style="overflow: auto">{{> "systems/alienrpg-homebrew/templates/actor/crt/tabs/sCraft-major-crit.html" }}</div>
 				</div>
 				<div class="spacec2">
 					<h1>{{localize "ALIENRPG.CREW"}}</h1>
-					<div>{{> "systems/alienrpg/templates/actor/tabs/spacecraft-crew.html" sections=inventory}}</div>
+					<div>{{> "systems/alienrpg-homebrew/templates/actor/tabs/spacecraft-crew.html" sections=inventory}}</div>
 					<div class="box-top" style="margin-top: 40px">
 						<h1>{{localize "ALIENRPG.ARMAMENTS"}}</h1>
-						<div>{{> "systems/alienrpg/templates/actor/tabs/spacecraft-armaments.html" sections=inventory}}</div>
+						<div>{{> "systems/alienrpg-homebrew/templates/actor/tabs/spacecraft-armaments.html" sections=inventory}}</div>
 					</div>
 				</div>
 			</div>
@@ -238,12 +238,12 @@
 			data-group="primary"
 			data-tab="inventory"
 		>
-			{{> "systems/alienrpg/templates/actor/tabs/spacecraft-inventory.hbs" sections=inventory}}
+			{{> "systems/alienrpg-homebrew/templates/actor/tabs/spacecraft-inventory.hbs" sections=inventory}}
 		</div>
 
 		<!-- Space Combat Phases -->
 		<div class="tab combatphases" data-group="primary" data-tab="combatphases">
-			{{> "systems/alienrpg/templates/actor/tabs/spacecraft-combat-phases.html" sections=combatphases}}
+			{{> "systems/alienrpg-homebrew/templates/actor/tabs/spacecraft-combat-phases.html" sections=combatphases}}
 		</div>
 		{{!-- Image Tab --}}
 		<div class="tab image" style="text-align: center" data-tab="image">

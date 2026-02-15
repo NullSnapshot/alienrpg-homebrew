@@ -47,25 +47,25 @@ export default class alienrpgCreatureSheet extends api.HandlebarsApplicationMixi
 	/** @override */
 	static PARTS = {
 		header: {
-			template: "systems/alienrpg/templates/actor/creature-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/creature-header.hbs",
 		},
 		tabs: {
 			// Foundry-provided generic template
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		notes: {
-			template: "systems/alienrpg/templates/actor/notes.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/notes.hbs",
 			scrollable: [""],
 		},
 		creature: {
-			template: "systems/alienrpg/templates/actor/creature-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/creature-general.hbs",
 			scrollable: [""],
 		},
 		crtuicreatureheader: {
-			template: "systems/alienrpg/templates/actor/crt/crtui-creature-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-creature-header.hbs",
 		},
 		crtuicreaturegeneral: {
-			template: "systems/alienrpg/templates/actor/crt/crtui-creature-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-creature-general.hbs",
 			scrollable: [""],
 		},
 	}
@@ -607,7 +607,7 @@ export default class alienrpgCreatureSheet extends api.HandlebarsApplicationMixi
 		let content = ""
 		let response = ""
 		content = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/dialog/roll-manual-creature-attack-dialog.hbs",
+			"systems/alienrpg-homebrew/templates/dialog/roll-manual-creature-attack-dialog.hbs",
 			actor,
 			dataset,
 		)
@@ -656,7 +656,7 @@ export default class alienrpgCreatureSheet extends api.HandlebarsApplicationMixi
 			const title =
 				game.i18n.localize("ALIENRPG.DialTitle1") + " " + label + " " + game.i18n.localize("ALIENRPG.DialTitle2")
 			content = await foundry.applications.handlebars.renderTemplate(
-				"systems/alienrpg/templates/dialog/roll-base-xeno-dialog.hbs",
+				"systems/alienrpg-homebrew/templates/dialog/roll-base-xeno-dialog.hbs",
 				actor,
 				dataset.dataset,
 			)

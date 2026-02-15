@@ -63,48 +63,48 @@ export default class alienrpgSyntheticSheet extends api.HandlebarsApplicationMix
 	/** @override */
 	static PARTS = {
 		syntheticheader: {
-			template: "systems/alienrpg/templates/actor/synthetic-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/synthetic-header.hbs",
 		},
 		syntheticENheader: {
-			template: "systems/alienrpg/templates/actor/synthetic-enhanced-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/synthetic-enhanced-header.hbs",
 		},
 		tabs: {
 			// Foundry-provided generic template
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		syntheticgeneral: {
-			template: "systems/alienrpg/templates/actor/synthetic-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/synthetic-general.hbs",
 			scrollable: [""],
 		},
 		syntheticENgeneral: {
-			template: "systems/alienrpg/templates/actor/synthetic-enhanced-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/synthetic-enhanced-general.hbs",
 			scrollable: [""],
 		},
 		notes: {
-			template: "systems/alienrpg/templates/actor/notes.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/notes.hbs",
 			scrollable: [""],
 		},
 		skills: {
-			template: "systems/alienrpg/templates/actor/character-skills.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/character-skills.hbs",
 			scrollable: [""],
 		},
 		inventory: {
-			template: "systems/alienrpg/templates/actor/character-inventory.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/character-inventory.hbs",
 			scrollable: [""],
 		},
 		crtuisyntheticheader: {
-			template: "systems/alienrpg/templates/actor/crt/crtui-synthetic-header.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-synthetic-header.hbs",
 		},
 		crtuisyntheticgeneral: {
-			template: "systems/alienrpg/templates/actor/crt/crtui-synthetic-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-synthetic-general.hbs",
 			scrollable: [""],
 		},
 		crtuicharacterskills: {
-			template: "systems/alienrpg/templates/actor/crt/crtui-character-skills.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-character-skills.hbs",
 			scrollable: [""],
 		},
 		crtuicharacterinventory: {
-			template: "systems/alienrpg/templates/actor/crt/crtui-character-inventory.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/crt/crtui-character-inventory.hbs",
 			scrollable: [""],
 		},
 	}

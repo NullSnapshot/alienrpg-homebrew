@@ -21,7 +21,7 @@ export class alienrpgPlanetSheet extends foundry.appv1.sheets.ActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ['alienrpg', 'sheet', 'actor', 'planet-sheet'],
-			template: 'systems/alienrpg/templates/actor/planet-sheet.html',
+			template: 'systems/alienrpg-homebrew/templates/actor/planet-sheet.html',
 			width: 1120,
 			height: 900,
 			tabs: [{ navSelector: '.sheet-tabs', contentSelector: '.sheet-body', initial: 'general' }],
@@ -29,11 +29,11 @@ export class alienrpgPlanetSheet extends foundry.appv1.sheets.ActorSheet {
 	}
 
 	// get template() {
-	// 	const path = 'systems/alienrpg/templates/actor/';
+	// 	const path = 'systems/alienrpg-homebrew/templates/actor/';
 	// 	// return `${path}actor-sheet.html`;
 	// 	// unique item sheet by type, like `weapon-sheet.html`.
 	// 	// if (game.settings.get('alienrpg', 'aliencrt')) {
-	// 	// 	return `systems/alienrpg/templates/actor/crt/${this.actor.type}-sheet.html`;
+	// 	// 	return `systems/alienrpg-homebrew/templates/actor/crt/${this.actor.type}-sheet.html`;
 	// 	// } else {
 	// 	return `${path}${this.actor.type}-sheet.html`;
 	// 	// }

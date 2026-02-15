@@ -87,7 +87,7 @@ export class alienrpgItem extends Item {
 			// Check that is a character or a synth pretending to be a character.
 			if (this.actor.type === "character" || actorData.header.synthstress) {
 				content = await foundry.applications.handlebars.renderTemplate(
-					"systems/alienrpg/templates/dialog/roll-all-dialog.hbs",
+					"systems/alienrpg-homebrew/templates/dialog/roll-all-dialog.hbs",
 					{ config, actorData, dataset },
 				)
 
@@ -151,7 +151,7 @@ export class alienrpgItem extends Item {
 			} else {
 				// Its not got stress so don't display the stress mod box
 				content = await foundry.applications.handlebars.renderTemplate(
-					"systems/alienrpg/templates/dialog/roll-base-dialog.hbs",
+					"systems/alienrpg-homebrew/templates/dialog/roll-base-dialog.hbs",
 					config,
 					actorData,
 					dataset,
@@ -231,7 +231,7 @@ export class alienrpgItem extends Item {
 								dataset.fullauto = true
 							}
 							content = await foundry.applications.handlebars.renderTemplate(
-								"systems/alienrpg/templates/dialog/roll-ranged-weapon-dialog.hbs",
+								"systems/alienrpg-homebrew/templates/dialog/roll-ranged-weapon-dialog.hbs",
 								{ config, actorData, dataset },
 							)
 							response = await foundry.applications.api.DialogV2.wait({
@@ -380,7 +380,7 @@ export class alienrpgItem extends Item {
 									return ui.notifications.warn(game.i18n.localize("ALIENRPG.noCrewAssigned"))
 								}
 								content = await foundry.applications.handlebars.renderTemplate(
-									"systems/alienrpg/templates/dialog/roll-vehicle-weapon.hbs",
+									"systems/alienrpg-homebrew/templates/dialog/roll-vehicle-weapon.hbs",
 									{ config, actorData, dataset, options },
 								)
 
@@ -480,7 +480,7 @@ export class alienrpgItem extends Item {
 									return ui.notifications.warn(game.i18n.localize("ALIENRPG.noCrewAssigned"))
 								}
 								content = await foundry.applications.handlebars.renderTemplate(
-									"systems/alienrpg/templates/dialog/roll-vehicle-weapon.hbs",
+									"systems/alienrpg-homebrew/templates/dialog/roll-vehicle-weapon.hbs",
 									{ config, actorData, dataset, options },
 								)
 
@@ -722,7 +722,7 @@ export class alienrpgItem extends Item {
 		const title = `${game.i18n.localize("ALIENRPG.DialTitle1")} ${dataset.label} ${game.i18n.localize("ALIENRPG.DialTitle2")}`
 
 		const content = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/dialog/roll-base-dialog.hbs",
+			"systems/alienrpg-homebrew/templates/dialog/roll-base-dialog.hbs",
 			{ item, dataset },
 		)
 

@@ -51,12 +51,12 @@ export default class alienrpgPlanetSheet extends api.HandlebarsApplicationMixin(
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		planetgeneral: {
-			template: "systems/alienrpg/templates/actor/planet-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/planet-general.hbs",
 			scrollable: [""],
 		},
 
 		notes: {
-			template: "systems/alienrpg/templates/actor/notes.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/notes.hbs",
 			scrollable: [""],
 		},
 	}

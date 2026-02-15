@@ -1,9 +1,9 @@
 {
-  "id": "alienrpg",
-  "title": "Alien Evolved",
-  "description": "The Alien Enhanced system for FoundryVTT",
+  "id": "alienrpg-homebrew",
+  "title": "4k RPG",
+  "description": "Homebrew modification of The Alien Enhanced system for FoundryVTT",
   "authors": [{ "name": "Paul Watson" }],
-  "url": "https://github.com/pwatson100/alienrpg",
+  "url": "https://github.com/NullSnapshot/alienrpg-homebrew",
   "flags": {
     "hotReload": {
       "extensions": ["css", "html", "hbs", "json"],
@@ -13,7 +13,7 @@
   "relationships": {
     "systems": [{ "id": "alienrpg" }]
   },
-  "version": "4.0.5",
+  "version": "0.0.1",
 
   "compatibility": {
     "minimum": "13",
@@ -160,17 +160,17 @@
     },
     {
       "type": "setup",
-      "url": "systems/alienrpg/images/egg.webp",
-      "thumbnail": "systems/alienrpg/images/egg.webp"
+      "url": "systems/alienrpg-homebrew/images/egg.webp",
+      "thumbnail": "systems/alienrpg-homebrew/images/egg.webp"
     }
   ],
-  "background": "systems/alienrpg/images/egg.webp",
+  "background": "systems/alienrpg-homebrew/images/egg.webp",
   "socket": true,
-  "manifest": "https://github.com/pwatson100/alienrpg/releases/download/4.0.0/system.json",
-  "download": "https://github.com/pwatson100/alienrpg/releases/download/4.0.0/master.zip",
+  "manifest": "https://github.com/pwatson100/alienrpg-homebrew/releases/download/4.0.0/system.json",
+  "download": "https://github.com/pwatson100/alienrpg-homebrew/releases/download/4.0.0/master.zip",
   "protected": false,
   "initiative": "1d10",
-  "bugs": "https://github.com/pwatson100/alienrpg/issues",
+  "bugs": "https://github.com/pwatson100/alienrpg-homebrew/issues",
   "grid": {
     "distance": 2,
     "units": "m"

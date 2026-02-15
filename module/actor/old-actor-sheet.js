@@ -33,11 +33,11 @@ export class alienrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 		})
 	}
 	get template() {
-		const path = "systems/alienrpg/templates/actor/"
+		const path = "systems/alienrpg-homebrew/templates/actor/"
 		// return `${path}actor-sheet.html`;
 		// unique item sheet by type, like `weapon-sheet.html`.
 		if (game.settings.get("alienrpg", "aliencrt")) {
-			return `systems/alienrpg/templates/actor/crt/${this.actor.type}-sheet.html`
+			return `systems/alienrpg-homebrew/templates/actor/crt/${this.actor.type}-sheet.html`
 		}
 		return `${path}${this.actor.type}-sheet.html`
 	}

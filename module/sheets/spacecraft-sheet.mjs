@@ -64,22 +64,22 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 			template: "templates/generic/tab-navigation.hbs",
 		},
 		spacecraftgeneral: {
-			template: "systems/alienrpg/templates/actor/spacecraft-general.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/spacecraft-general.hbs",
 			scrollable: [""],
 		},
 		spacecraftinventory: {
-			template: "systems/alienrpg/templates/actor/spacecraft-inventory.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/spacecraft-inventory.hbs",
 			scrollable: [""],
 		},
 		spacecraftcombat: {
-			template: "systems/alienrpg/templates/actor/spacecraft-combat-phases.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/spacecraft-combat-phases.hbs",
 		},
 		spacecraftimage: {
-			template: "systems/alienrpg/templates/actor/spacecraft-image.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/spacecraft-image.hbs",
 			scrollable: [""],
 		},
 		notes: {
-			template: "systems/alienrpg/templates/actor/notes.hbs",
+			template: "systems/alienrpg-homebrew/templates/actor/notes.hbs",
 			scrollable: [""],
 		},
 	}
@@ -485,7 +485,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 
 		// Now push the correct chat message
 		const html = await foundry.applications.handlebars.renderTemplate(
-			"systems/alienrpg/templates/chat/ship-combat.hbs",
+			"systems/alienrpg-homebrew/templates/chat/ship-combat.hbs",
 			htmlData,
 		)
 
