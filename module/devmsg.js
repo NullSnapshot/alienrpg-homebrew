@@ -7,9 +7,9 @@ export function sendDevMessage() {
 	if (game.user.isGM) {
 		// debugger;
 		let jqxhr = $.getJSON(
-			"https://raw.githubusercontent.com/pwatson100/alienrpg-homebrew/master/msgdata/data.json",
+			"https://raw.githubusercontent.com/pwatson100/alienrpg/master/msgdata/data.json",
 			function (data) {
-				let latestVersion = game.settings.get("alienrpg", "alienrpgDevMessageVersionNumber")
+				let latestVersion = game.settings.get("alienrpg-homebrew", "alienrpgDevMessageVersionNumber")
 				if (isNaN(latestVersion)) {
 					latestVersion = 0
 				}
@@ -29,7 +29,7 @@ export function sendDevMessage() {
 					latestVersion = Math.max(latestVersion, msgenvelope.version)
 				}
 				console.log("latestVersion after " + latestVersion)
-				game.settings.set("alienrpg", "alienrpgDevMessageVersionNumber", latestVersion)
+				game.settings.set("alienrpg-homebrew", "alienrpgDevMessageVersionNumber", latestVersion)
 			},
 		).fail(function (data) {
 			console.log("Could not retrieve Alien RPG news Message:" + JSON.stringify(data))

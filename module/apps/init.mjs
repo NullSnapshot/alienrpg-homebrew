@@ -4,8 +4,8 @@ import updateModule from "./update.js"
 export const systemName = "Alien RPG"
 // export const requiredSystemVersion = '3.0.0';
 // export const moduleVersion = '3.0.0';
-export const moduleKey = "alienrpg" // Module name. Important that this one is the exact same as the name of the module
-export const adventurePack = "alienrpg.alien-rpg-system"
+export const moduleKey = "alienrpg-homebrew" // Module name. Important that this one is the exact same as the name of the module
+export const adventurePack = "alienrpg-homebrew.alien-rpg-system"
 export const adventurePackName = "Alien RPG System"
 export const moduleTitle = "Alien RPG" // Module Title, is not referenced beyond giving a title to HTML dialog, so can be anything
 // export const welcomeJournalEntry = '00.00 HoD - How To Use This Module'; // The name of a journal entry you want to display after import.
@@ -50,7 +50,7 @@ Hooks.on("ready", () => {
 		FirstTimeSetup()
 		// ModuleImport();
 		return
-} else if (game.settings.get(moduleKey, 'migrationVersion') < "4.0.0") {
+} else if (game.settings.get(moduleKey, 'migrationVersion') < "0.0.2") {
 		FirstTimeSetup()
 return;
 	}

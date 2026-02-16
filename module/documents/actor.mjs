@@ -80,7 +80,7 @@ export class alienrpgActor extends Actor {
 			"prototypeToken.sight.enabled": "true",
 			"prototypeToken.sight.range": "12",
 		}
-		if (game.settings.get("alienrpg", "defaultTokenSettings")) {
+		if (game.settings.get("alienrpg-homebrew", "defaultTokenSettings")) {
 			switch (context.type) {
 				case "character":
 					tokenProto["prototypeToken.bar2"] = { attribute: "header.stress" }
@@ -258,7 +258,7 @@ export class alienrpgActor extends Actor {
 				r2Data = 0
 				reRoll = true
 
-				if (dataset.armorP === "true" && game.settings.get("alienrpg", "evolved")) {
+				if (dataset.armorP === "true" && game.settings.get("alienrpg-homebrew", "evolved")) {
 					r1Data = Number(r1Data - 1 || 0) // fix to armor so it rounds up instead of down
 					dataset.armorP = "false"
 				} else {
@@ -464,7 +464,7 @@ export class alienrpgActor extends Actor {
 				break
 			case "armor":
 				{
-					if (game.settings.get("alienrpg", "evolved")) {
+					if (game.settings.get("alienrpg-homebrew", "evolved")) {
 						response = await foundry.applications.api.DialogV2.wait({
 							window: { title: title },
 							content,
@@ -1349,7 +1349,7 @@ export class alienrpgActor extends Actor {
 	}
 
 	async pushRoll(actor, reRoll, hostile, blind, message) {
-		if (!game.settings.get("alienrpg", "evolved")) {
+		if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 			await actor.update({
 				"system.header.stress.value": actor.system.header.stress.value + 1,
 			})
@@ -1569,7 +1569,7 @@ export class alienrpgActor extends Actor {
 		const blind = false
 		const r2Data = 1
 		const radMax = actor.getRollData().general.radiation.max
-						if (!game.settings.get("alienrpg", "evolved")) {
+						if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 		await yze.yzeRoll(
 			effectiveActorType,
 			blind,
@@ -1687,7 +1687,7 @@ export class alienrpgActor extends Actor {
 		switch (type) {
 			case "character":
 {			
-							if (game.settings.get("alienrpg", "evolved")) {
+							if (game.settings.get("alienrpg-homebrew", "evolved")) {
 			atable =
 					game.tables.getName(game.i18n.localize("ALIENRPG.EVCriticalInjuries")) ||
 					game.tables.getName("EV - Critical Injuries")
@@ -1705,7 +1705,7 @@ export class alienrpgActor extends Actor {
 						break
 				case "synthetic":
 // {		
-// 			if (game.settings.get("alienrpg", "evolved")) {
+// 			if (game.settings.get("alienrpg-homebrew", "evolved")) {
 
 
 // } else {
@@ -1819,7 +1819,7 @@ export class alienrpgActor extends Actor {
 							healTime = 0
 							break
 					}
-							if (game.settings.get("alienrpg", "evolved")) {
+							if (game.settings.get("alienrpg-homebrew", "evolved")) {
 					switch (test1.roll._total) {
 						case 15:
 							rangedcombat = -1

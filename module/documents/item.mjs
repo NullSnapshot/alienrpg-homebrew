@@ -226,7 +226,7 @@ export class alienrpgItem extends Item {
 				// Define the roll formula.
 				switch (itemData.header.type.value) {
 					case "1":
-						if (game.settings.get("alienrpg", "evolved")) {
+						if (game.settings.get("alienrpg-homebrew", "evolved")) {
 							if (this.system.header.fullauto) {
 								dataset.fullauto = true
 							}

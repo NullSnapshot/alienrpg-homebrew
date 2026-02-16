@@ -3,7 +3,7 @@ import { AlienConfig } from "./alienRPGConfig.mjs"
 export default function () {
 	// Register system settings
 
-	game.settings.registerMenu("alienrpg", "alienrpgSettings", {
+	game.settings.registerMenu("alienrpg-homebrew", "alienrpgSettings", {
 		name: "ALIENRPG.MenuName",
 		label: "ALIENRPG.MenuLabel",
 		hint: "ALIENRPG.MenuHint",
@@ -11,7 +11,7 @@ export default function () {
 		type: AlienConfig,
 		restricted: false,
 	})
-	game.settings.register("alienrpg", "evolved", {
+	game.settings.register("alienrpg-homebrew", "evolved", {
 		name: "ALIENRPG.Evolved",
 		hint: "ALIENRPG.EvolvedHint",
 		scope: "world",
@@ -23,7 +23,7 @@ export default function () {
 			location.reload()
 		},
 	})
-	game.settings.register("alienrpg", "autopanic", {
+	game.settings.register("alienrpg-homebrew", "autopanic", {
 		name: "ALIENRPG.AutoPanic",
 		hint: "ALIENRPG.AutoPanicHint",
 		scope: "world",
@@ -33,7 +33,7 @@ export default function () {
 		restricted: true,
 	})
 
-	game.settings.register("alienrpg", "dollar", {
+	game.settings.register("alienrpg-homebrew", "dollar", {
 		name: "ALIENRPG.Dollar",
 		hint: "ALIENRPG.DollarNote",
 		scope: "world",
@@ -42,7 +42,7 @@ export default function () {
 		config: true,
 	})
 
-	game.settings.register("alienrpg", "switchMouseKeys", {
+	game.settings.register("alienrpg-homebrew", "switchMouseKeys", {
 		name: "ALIENRPG.SwitchKeys",
 		hint: "ALIENRPG.SwitchKeysHint",
 		scope: "client",
@@ -54,7 +54,7 @@ export default function () {
 		},
 	})
 
-	game.settings.register("alienrpg", "alienrpgHideInitChat", {
+	game.settings.register("alienrpg-homebrew", "alienrpgHideInitChat", {
 		name: "ALIENRPG.hideInitChat",
 		hint: "ALIENRPG.hideInitChatHint",
 		scope: "world",
@@ -63,7 +63,7 @@ export default function () {
 		type: Boolean,
 	})
 
-	game.settings.register("alienrpg", "switchJournalColour", {
+	game.settings.register("alienrpg-homebrew", "switchJournalColour", {
 		name: "ALIENRPG.hideJournalBGImage",
 		hint: "ALIENRPG.hideJournalBGImageNote",
 		scope: "client",
@@ -75,7 +75,7 @@ export default function () {
 		},
 	})
 
-	game.settings.register("alienrpg", "switchchatbackground", {
+	game.settings.register("alienrpg-homebrew", "switchchatbackground", {
 		name: "ALIENRPG.hideChatBGImage",
 		hint: "ALIENRPG.hideChatBGImageNote",
 		scope: "client",
@@ -87,7 +87,7 @@ export default function () {
 		},
 	})
 
-	game.settings.register("alienrpg", "macroShorthand", {
+	game.settings.register("alienrpg-homebrew", "macroShorthand", {
 		name: "ALIENRPG.DefMacro",
 		hint: "ALIENRPG.DefMacroHint",
 		scope: "world",
@@ -97,7 +97,7 @@ export default function () {
 	})
 
 	// register setting for add/remove menu button
-	game.settings.register("alienrpg", "addMenuButton", {
+	game.settings.register("alienrpg-homebrew", "addMenuButton", {
 		name: "ALIENRPG.AddMenuName",
 		hint: "ALIENRPG.AddMenuHint",
 		scope: "world",
@@ -109,7 +109,7 @@ export default function () {
 		},
 	})
 
-	game.settings.register("alienrpg", "defaultTokenSettings", {
+	game.settings.register("alienrpg-homebrew", "defaultTokenSettings", {
 		name: "ALIENRPG.DefProto",
 		hint: "ALIENRPG.DefProtoHint",
 		scope: "world",
@@ -119,7 +119,7 @@ export default function () {
 	})
 
 	// Register system settings
-	game.settings.register("alienrpg", "fontColour", {
+	game.settings.register("alienrpg-homebrew", "fontColour", {
 		name: "ALIENRPG.Fontpick",
 		label: "ALIENRPG.Colpick",
 		hint: "ALIENRPG.ColpickHint",
@@ -131,7 +131,7 @@ export default function () {
 		default: "#adff2f",
 	})
 
-	game.settings.register("alienrpg", "fontStyle", {
+	game.settings.register("alienrpg-homebrew", "fontStyle", {
 		name: "ALIENRPG.FontStyle",
 		label: "ALIENRPG.StylePicker",
 		hint: "ALIENRPG.StylePickerHint",
@@ -143,7 +143,7 @@ export default function () {
 		default: "OCR-A",
 	})
 
-	game.settings.register("alienrpg", "alienitemselect", {
+	game.settings.register("alienrpg-homebrew", "alienitemselect", {
 		name: "ALIENRPG.FontStyle",
 		restricted: false,
 		scope: "client",
@@ -152,7 +152,7 @@ export default function () {
 		default: "#e0f287",
 	})
 
-	game.settings.register("alienrpg", "aliendarkergreen", {
+	game.settings.register("alienrpg-homebrew", "aliendarkergreen", {
 		name: "ALIENRPG.FontStyle",
 		restricted: false,
 		scope: "client",
@@ -160,7 +160,7 @@ export default function () {
 		config: false,
 		default: "#29a253",
 	})
-	game.settings.register("alienrpg", "alienoddtab", {
+	game.settings.register("alienrpg-homebrew", "alienoddtab", {
 		name: "ALIENRPG.FontStyle",
 		restricted: false,
 		scope: "client",
@@ -168,7 +168,7 @@ export default function () {
 		config: false,
 		default: "#14160c",
 	})
-	game.settings.register("alienrpg", "aliencrt", {
+	game.settings.register("alienrpg-homebrew", "aliencrt", {
 		name: "ALIENRPG.FontStyle",
 		restricted: false,
 		scope: "client",
@@ -177,7 +177,7 @@ export default function () {
 		default: false,
 	})
 
-	game.settings.register("alienrpg", "systemMigrationVersion", {
+	game.settings.register("alienrpg-homebrew", "systemMigrationVersion", {
 		name: "System Migration Version",
 		scope: "world",
 		config: false,
@@ -185,7 +185,7 @@ export default function () {
 		default: 0,
 	})
 
-	game.settings.register("alienrpg", "alienrpgDevMessageVersionNumber", {
+	game.settings.register("alienrpg-homebrew", "alienrpgDevMessageVersionNumber", {
 		name: "Message from the devs",
 		hint: "Used to track last message id from the Alien RPG devs",
 		scope: "world",
@@ -194,7 +194,7 @@ export default function () {
 		type: Number,
 	})
 
-	game.settings.register("alienrpg", "JournalFontColour", {
+	game.settings.register("alienrpg-homebrew", "JournalFontColour", {
 		name: "ALIENRPG.Fontpick",
 		label: "ALIENRPG.Colpick",
 		hint: "ALIENRPG.ColpickHint",
@@ -206,7 +206,7 @@ export default function () {
 		default: "#b1e0e7",
 	})
 
-	game.settings.register("alienrpg", "ARPGSemaphore", {
+	game.settings.register("alienrpg-homebrew", "ARPGSemaphore", {
 		name: "Semaphore Flag",
 		hint: "Flag for running sequential actions/scripts",
 		scope: "world",

@@ -8,7 +8,7 @@
  * core submodules
  */
 
-const NAME = "alienrpg"
+const NAME = "alienrpg-homebrew"
 const TITLE = "Alien RPG - Core System"
 const PATH = `systems/${NAME}`
 

@@ -80,7 +80,7 @@ export default class alienrpgCreatureSheet extends api.HandlebarsApplicationMixi
 		// Control which parts show based on document subtype
 		switch (this.document.type) {
 			case "creature":
-				if (game.settings.get("alienrpg", "aliencrt")) {
+				if (game.settings.get("alienrpg-homebrew", "aliencrt")) {
 					options.parts.push("crtuicreatureheader", "tabs", "crtuicreaturegeneral", "notes")
 				} else {
 					options.parts.push("header", "tabs", "creature", "notes")
@@ -110,7 +110,7 @@ export default class alienrpgCreatureSheet extends api.HandlebarsApplicationMixi
 			// Necessary for formInput and formFields helpers
 			fields: this.document.schema.fields,
 			systemFields: this.document.system.schema.fields,
-			isEvolved: game.settings.get("alienrpg", "evolved"),
+			isEvolved: game.settings.get("alienrpg-homebrew", "evolved"),
 
 			isEnc: this.actor.type === "character" || this.actor.type === "synthetic",
 			// isNPC: this.actor.system.header.npc || false,
@@ -167,7 +167,7 @@ export default class alienrpgCreatureSheet extends api.HandlebarsApplicationMixi
 		// If you have sub-tabs this is necessary to change
 		const tabGroup = "primary"
 		// Default tab for first time it's rendered this session
-		const sheetType = game.settings.get("alienrpg", "aliencrt")
+		const sheetType = game.settings.get("alienrpg-homebrew", "aliencrt")
 
 		switch (sheetType) {
 			case false:

@@ -93,7 +93,7 @@ export default class alienrpgColonySheet extends api.HandlebarsApplicationMixin(
 			// Necessary for formInput and formFields helpers
 			fields: this.document.schema.fields,
 			systemFields: this.document.system.schema.fields,
-			isEvolved: game.settings.get("alienrpg", "evolved"),
+			isEvolved: game.settings.get("alienrpg-homebrew", "evolved"),
 			// isEnc: this.actor.type === "character" || this.actor.type === "synthetic",
 			// isNPC: this.actor.system.header.npc || false,
 			// isSynthetic: this.actor.type === "synthetic",
@@ -163,8 +163,8 @@ export default class alienrpgColonySheet extends api.HandlebarsApplicationMixin(
 		// If you have sub-tabs this is necessary to change
 		const tabGroup = "primary"
 		// Default tab for first time it's rendered this session
-		// const sheetType = game.settings.get("alienrpg", "aliencrt")
-		// const enhanced = game.settings.get("alienrpg", "evolved")
+		// const sheetType = game.settings.get("alienrpg-homebrew", "aliencrt")
+		// const enhanced = game.settings.get("alienrpg-homebrew", "evolved")
 
 		if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = "colonygeneral"
 
@@ -578,7 +578,7 @@ export default class alienrpgColonySheet extends api.HandlebarsApplicationMixin(
 		}
 		function onBlur(e) {
 			const value = localStringToNumber(e.target.value)
-			if (game.settings.get("alienrpg", "dollar"))
+			if (game.settings.get("alienrpg-homebrew", "dollar"))
 				e.target.value = value
 					? Intl.NumberFormat("en-EN", {
 							style: "currency",

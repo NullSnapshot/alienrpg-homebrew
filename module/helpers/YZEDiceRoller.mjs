@@ -195,8 +195,8 @@ export class yze {
 					'<div class="warnblink alienchatred"; style="font-weight: bold; font-size: larger">' +
 					game.i18n.localize("ALIENRPG.rollStress") +
 					"</div>"
-				if (game.settings.get("alienrpg", "autopanic")) {
-					if (game.settings.get("alienrpg", "evolved")) {
+				if (game.settings.get("alienrpg-homebrew", "autopanic")) {
+					if (game.settings.get("alienrpg-homebrew", "evolved")) {
 						if (tactorid !== "spacecraft") {
 							myActor = game.actors.get(actorid)
 							console.log("PC Panic")

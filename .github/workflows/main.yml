@@ -29,7 +29,7 @@ jobs:
         # 4. Configure the datapath as the github workspace variable.
       - run: fvtt configure set "dataPath" ${GITHUB_WORKSPACE}
         # 5. Tell the FVTT CLI that we are working on a "system" package.
-      - run: fvtt package workon fvtt package workon "alienrpg" --type "System"
+      - run: fvtt package workon fvtt package workon "alienrpg-homebrew" --type "System"
         # 6-11. Package each folder of source json files into the appropriate LevelDB pack.
       - run: fvtt package pack "alien-rpg-system" --in "src/packs/alien-rpg-system" --out "packs"
 

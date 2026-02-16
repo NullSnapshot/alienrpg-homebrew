@@ -285,7 +285,7 @@ export class alienrpgSpacecraftSheet extends foundry.appv1.sheets.ActorSheet {
 			item.sheet.render(true)
 		})
 
-		if (game.settings.get("alienrpg", "switchMouseKeys")) {
+		if (game.settings.get("alienrpg-homebrew", "switchMouseKeys")) {
 			// Right to Roll and left to mod
 			// Rollable abilities.
 			html.find(".rollable").contextmenu(this._onRoll.bind(this))
@@ -666,7 +666,7 @@ export class alienrpgSpacecraftSheet extends foundry.appv1.sheets.ActorSheet {
 		}
 		function onBlur(e) {
 			const value = localStringToNumber(e.target.value)
-			if (game.settings.get("alienrpg", "dollar"))
+			if (game.settings.get("alienrpg-homebrew", "dollar"))
 				e.target.value = value
 					? Intl.NumberFormat("en-EN", { style: "currency", currency: "USD" }).format(value)
 					: "$0.00"

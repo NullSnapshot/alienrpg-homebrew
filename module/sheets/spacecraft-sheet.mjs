@@ -123,7 +123,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 			// Necessary for formInput and formFields helpers
 			fields: this.document.schema.fields,
 			// systemFields: this.document.system.schema.fields,
-			isEvolved: game.settings.get("alienrpg", "evolved"),
+			isEvolved: game.settings.get("alienrpg-homebrew", "evolved"),
 			isEnc: this.actor.type === "character" || this.actor.type === "synthetic",
 			isSynthetic: this.actor.type === "synthetic",
 			isVehicle: this.actor.type === "vehicle",
@@ -210,7 +210,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 		// If you have sub-tabs this is necessary to change
 		const tabGroup = "primary"
 		// Default tab for first time it's rendered this session
-		// const enhanced = game.settings.get("alienrpg", "evolved")
+		// const enhanced = game.settings.get("alienrpg-homebrew", "evolved")
 
 		if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = "spacecraftgeneral"
 
@@ -452,7 +452,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 		if (event.detail > 1) return // Ignore repeated clicks
 		const dataset = target.dataset
 		const panicActor = game.actors.get(dataset.crewpanic)
-		if (!game.settings.get("alienrpg", "evolved")) {
+		if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 			if (event.button === 2) {
 				await this.actor.rollPanicMod(panicActor, dataset)
 			} else {
@@ -516,7 +516,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 		event.stopPropagation() // Don't trigger other events
 		if (event.detail > 1) return // Ignore repeated clicks
 		const dataset = target.dataset
-		// if (!game.settings.get("alienrpg", "evolved")) {
+		// if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 			if (event.button === 2) {
 				await this.actor.rollCritMan(this.actor, this.actor.type, dataset)
 			} else {
@@ -536,7 +536,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 		event.stopPropagation() // Don't trigger other events
 		if (event.detail > 1) return // Ignore repeated clicks
 		const dataset = target.dataset
-		// if (!game.settings.get("alienrpg", "evolved")) {
+		// if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 			if (event.button === 2) {
 				await this.actor.rollCritMan(this.actor, this.actor.type, dataset)
 			} else {
@@ -722,7 +722,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 		const itemId = target.dataset.itemId
 		const item = this.actor.items.get(itemId)
 		const actorID = this.actor.id
-		if (game.settings.get("alienrpg", "evolved")) {
+		if (game.settings.get("alienrpg-homebrew", "evolved")) {
 			if (event.button === 2) {
 				if (item.type === "weapon") {
 					// Trigger the item roll
@@ -898,7 +898,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 		}
 		function onBlur(e) {
 			const value = localStringToNumber(e.target.value)
-			if (game.settings.get("alienrpg", "dollar"))
+			if (game.settings.get("alienrpg-homebrew", "dollar"))
 				e.target.value = value
 					? Intl.NumberFormat("en-EN", {
 							style: "currency",
@@ -1020,7 +1020,7 @@ export default class alienrpgSpacecraftSheet extends api.HandlebarsApplicationMi
 		event.stopPropagation() // Don't trigger other events
 		if (event.detail > 1) return // Ignore repeated clicks
 		const dataset = target.dataset
-		if (!game.settings.get("alienrpg", "evolved")) {
+		if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 			if (event.button === 2) {
 				await this.actor.rollPanicMod(this.actor, dataset)
 			} else {

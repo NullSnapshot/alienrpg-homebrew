@@ -18,42 +18,42 @@ export class AlienConfig extends FormApplication {
 
 	getData(options) {
 		return foundry.utils.mergeObject({
-			fontStyle: game.settings.get("alienrpg", "fontStyle"),
-			fontColour: game.settings.get("alienrpg", "fontColour"),
-			journalFontColour: game.settings.get("alienrpg", "JournalFontColour"),
+			fontStyle: game.settings.get("alienrpg-homebrew", "fontStyle"),
+			fontColour: game.settings.get("alienrpg-homebrew", "fontColour"),
+			journalFontColour: game.settings.get("alienrpg-homebrew", "JournalFontColour"),
 		})
 	}
 
 	activateListeners(html) {
 		super.activateListeners(html)
 		html.find('button[name="reset"]').click(this.onReset.bind(this))
-		document.getElementById("fontStyle").value = game.settings.get("alienrpg", "fontStyle")
+		document.getElementById("fontStyle").value = game.settings.get("alienrpg-homebrew", "fontStyle")
 
 		html.find('button[name="addcrt"]').click(this.onCRT.bind(this))
 	}
 
 	async onReset() {
 		// this.reset = true;
-		await game.settings.set("alienrpg", "fontStyle", "OCR-A")
-		await game.settings.set("alienrpg", "fontColour", "#adff2f")
-		await game.settings.set("alienrpg", "JournalFontColour", "#b1e0e7")
-		await game.settings.set("alienrpg", "aliencrt", false)
+		await game.settings.set("alienrpg-homebrew", "fontStyle", "OCR-A")
+		await game.settings.set("alienrpg-homebrew", "fontColour", "#adff2f")
+		await game.settings.set("alienrpg-homebrew", "JournalFontColour", "#b1e0e7")
+		await game.settings.set("alienrpg-homebrew", "aliencrt", false)
 
 		location.reload()
 	}
 
 	async onCRT() {
-		await game.settings.set("alienrpg", "aliencrt", true)
-		await game.settings.set("alienrpg", "fontStyle", "Kosugi")
-		await game.settings.set("alienrpg", "fontColour", "#88f2ad")
+		await game.settings.set("alienrpg-homebrew", "aliencrt", true)
+		await game.settings.set("alienrpg-homebrew", "fontStyle", "Kosugi")
+		await game.settings.set("alienrpg-homebrew", "fontColour", "#88f2ad")
 		location.reload()
 	}
 
 	async _updateObject(event, formData) {
 		// console.log('_updateObject -> formData', formData);
-		await game.settings.set("alienrpg", "fontColour", formData.fontColour)
-		await game.settings.set("alienrpg", "fontStyle", formData.fontStyle)
-		await game.settings.set("alienrpg", "JournalFontColour", formData.journalFontColour)
+		await game.settings.set("alienrpg-homebrew", "fontColour", formData.fontColour)
+		await game.settings.set("alienrpg-homebrew", "fontStyle", formData.fontStyle)
+		await game.settings.set("alienrpg-homebrew", "JournalFontColour", formData.journalFontColour)
 		ui.notifications.info(game.i18n.localize("ALIENRPG.Consumables"))
 		location.reload()
 	}

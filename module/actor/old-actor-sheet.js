@@ -36,7 +36,7 @@ export class alienrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 		const path = "systems/alienrpg-homebrew/templates/actor/"
 		// return `${path}actor-sheet.html`;
 		// unique item sheet by type, like `weapon-sheet.html`.
-		if (game.settings.get("alienrpg", "aliencrt")) {
+		if (game.settings.get("alienrpg-homebrew", "aliencrt")) {
 			return `systems/alienrpg-homebrew/templates/actor/crt/${this.actor.type}-sheet.html`
 		}
 		return `${path}${this.actor.type}-sheet.html`
@@ -190,7 +190,7 @@ export class alienrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 			item.sheet.render(true)
 		})
 
-		if (game.settings.get("alienrpg", "switchMouseKeys")) {
+		if (game.settings.get("alienrpg-homebrew", "switchMouseKeys")) {
 			// Right to Roll and left to mod
 			// Rollable abilities.
 			html.find(".rollable").contextmenu(this._onRoll.bind(this))
@@ -1319,7 +1319,7 @@ export class alienrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 		}
 		function onBlur(e) {
 			const value = localStringToNumber(e.target.value)
-			if (game.settings.get("alienrpg", "dollar"))
+			if (game.settings.get("alienrpg-homebrew", "dollar"))
 				e.target.value = value
 					? Intl.NumberFormat("en-EN", { style: "currency", currency: "USD" }).format(value)
 					: "$0.00"

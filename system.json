@@ -11,7 +11,7 @@
     }
   },
   "relationships": {
-    "systems": [{ "id": "alienrpg" }]
+    "systems": [{ "id": "alienrpg-homebrew" }]
   },
   "version": "0.0.1",
 

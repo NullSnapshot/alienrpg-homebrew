@@ -14,7 +14,7 @@ export const migrateWorld = async function () {
 	for (let p of game.packs) {
 		if (
 			![
-				"alienrpg",
+				"alienrpg-homebrew",
 				"alienrpg-corerules",
 				"alienrpg-destroyerofworlds",
 				"alienrpg-starterset",
@@ -82,7 +82,7 @@ export const migrateWorld = async function () {
 	// }
 
 	// Set the migration as complete
-	game.settings.set("alienrpg", "systemMigrationVersion", game.system.version)
+	game.settings.set("alienrpg-homebrew", "systemMigrationVersion", game.system.version)
 	ui.notifications.info(`AlienRPG System Migration to version ${game.system.version} completed!`, { permanent: true })
 }
 

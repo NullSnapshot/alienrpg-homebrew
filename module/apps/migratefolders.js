@@ -3,14 +3,14 @@ import { adventurePack, adventurePackName, moduleKey, moduleTitle } from "./init
 export default async function migrateFolders() {
 	await delay(200)
 
-	while ((await game.settings.get("alienrpg", "ARPGSemaphore")) === "busy") {
+	while ((await game.settings.get("alienrpg-homebrew", "ARPGSemaphore")) === "busy") {
 		await delay(10000)
 		console.warn("Core System Waiting")
 		ui.notifications.warn("Core System Upgrade Waiting")
 	}
 
-	await game.settings.set("alienrpg", "ARPGSemaphore", "busy")
-	logger.warn("Status: ", await game.settings.get("alienrpg", "ARPGSemaphore"), "Core System Starting Upgrade")
+	await game.settings.set("alienrpg-homebrew", "ARPGSemaphore", "busy")
+	logger.warn("Status: ", await game.settings.get("alienrpg-homebrew", "ARPGSemaphore"), "Core System Starting Upgrade")
 	ui.notifications.warn("Core System Starting Upgrade")
 
 	// Folder ID Migration
@@ -115,11 +115,11 @@ async function allDone(moduleTitle) {
 			console.log("All Done")
 		},
 	})
-	await game.settings.set("alienrpg", "ARPGSemaphore", "")
+	await game.settings.set("alienrpg-homebrew", "ARPGSemaphore", "")
 	await game.settings.set(moduleKey, "migrationVersion", game.system.version)
 	game.journal.getName("MU/TH/ER Instructions.").show()
 
-	logger.warn("Status: ", await game.settings.get("alienrpg", "ARPGSemaphore"), "Core System Upgrade Completed")
+	logger.warn("Status: ", await game.settings.get("alienrpg-homebrew", "ARPGSemaphore"), "Core System Upgrade Completed")
 	logger.info(
 		"Imorted ",
 		game.settings.get(moduleKey, "imported"),

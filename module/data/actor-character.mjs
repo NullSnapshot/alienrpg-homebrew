@@ -469,7 +469,7 @@ export default class alienrpgCharacter extends alienrpgActorBase {
 		}
 
 		this.header.health.mod = this.header.health.mod = Number(attrMod.health || 0)
-		if (game.settings.get("alienrpg", "evolved")) {
+		if (game.settings.get("alienrpg-homebrew", "evolved")) {
 			this.header.health.max =
 				Math.round((this.attributes.str.value + this.attributes.agl.value) / 2) + this.header.health.mod
 			this.header.health.calculatedMax =

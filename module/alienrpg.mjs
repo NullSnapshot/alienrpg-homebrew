@@ -166,54 +166,54 @@ Hooks.once("init", () => {
 
 	// Register sheet application classes
 	collections.Actors.unregisterSheet("core", sheets.ActorSheet)
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgColonySheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgColonySheet, {
 		types: ["colony"],
 
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Colony",
 	})
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgCharacterSheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgCharacterSheet, {
 		types: ["character"],
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Character",
 	})
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgSyntheticSheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgSyntheticSheet, {
 		types: ["synthetic"],
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Synthetic",
 	})
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgCreatureSheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgCreatureSheet, {
 		types: ["creature"],
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Creature",
 	})
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgVehicleSheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgVehicleSheet, {
 		types: ["vehicles"],
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Vehicle",
 	})
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgTerritorySheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgTerritorySheet, {
 		types: ["territory"],
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Territory",
 	})
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgSpacecraftSheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgSpacecraftSheet, {
 		types: ["spacecraft"],
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Spacecraft",
 	})
-	collections.Actors.registerSheet("alienrpg", ActorSheets.alienrpgPlanetSheet, {
+	collections.Actors.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgPlanetSheet, {
 		types: ["planet"],
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Planet",
 	})
 
 	collections.Items.unregisterSheet("core", sheets.ItemSheet)
-	collections.Items.registerSheet("alienrpg", ActorSheets.alienrpgItemSheet, {
+	collections.Items.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgItemSheet, {
 		makeDefault: true,
 		label: "ALIENRPG.SheetLabels.Item",
 	})
-	collections.Items.registerSheet("alienrpg", ActorSheets.alienrpgItemSheet, {
+	collections.Items.registerSheet("alienrpg-homebrew", ActorSheets.alienrpgItemSheet, {
 		types: [
 			"item",
 			"weapon",
@@ -233,7 +233,7 @@ Hooks.once("init", () => {
 		label: "ALIENRPG.SheetLabels.Item",
 	})
 	DocumentSheetConfig.unregisterSheet(ActiveEffect, "core", foundry.applications.sheets.ActiveEffectConfig)
-	DocumentSheetConfig.registerSheet(ActiveEffect, "alienrpg", ActorSheets.AlienRPGActiveEffectConfig, {
+	DocumentSheetConfig.registerSheet(ActiveEffect, "alienrpg-homebrew", ActorSheets.AlienRPGActiveEffectConfig, {
 		makeDefault: true,
 		label: "ALIENRPG.SHEET.Labels.ActiveEffect",
 	})
@@ -310,7 +310,7 @@ Hooks.once("ready", async () => {
 	showReleaseNotes()
 
 	// Determine whether a system migration is required and feasible
-	// const currentVersion = game.settings.get("alienrpg", "systemMigrationVersion")
+	// const currentVersion = game.settings.get("alienrpg-homebrew", "systemMigrationVersion")
 	// const NEEDS_MIGRATION_VERSION = "2.1.0"
 	// const COMPATIBLE_MIGRATION_VERSION = "0" || isNaN("NaN")
 	// const needMigration = currentVersion < NEEDS_MIGRATION_VERSION || currentVersion === null
@@ -335,20 +335,20 @@ Hooks.once("ready", async () => {
 	}, 250)
 
 	const r = document.querySelector(":root")
-	r.style.setProperty("--aliengreen", game.settings.get("alienrpg", "fontColour"))
-	r.style.setProperty("--alienfont", game.settings.get("alienrpg", "fontStyle"))
-	r.style.setProperty("--aliendarkergreen", game.settings.get("alienrpg", "aliendarkergreen"))
-	r.style.setProperty("--alienitemselect", game.settings.get("alienrpg", "alienitemselect"))
-	r.style.setProperty("--alienoddtab", game.settings.get("alienrpg", "alienoddtab"))
-	r.style.setProperty("--alientextjournal", game.settings.get("alienrpg", "JournalFontColour"))
-	if (game.settings.get("alienrpg", "switchJournalColour")) {
+	r.style.setProperty("--aliengreen", game.settings.get("alienrpg-homebrew", "fontColour"))
+	r.style.setProperty("--alienfont", game.settings.get("alienrpg-homebrew", "fontStyle"))
+	r.style.setProperty("--aliendarkergreen", game.settings.get("alienrpg-homebrew", "aliendarkergreen"))
+	r.style.setProperty("--alienitemselect", game.settings.get("alienrpg-homebrew", "alienitemselect"))
+	r.style.setProperty("--alienoddtab", game.settings.get("alienrpg-homebrew", "alienoddtab"))
+	r.style.setProperty("--alientextjournal", game.settings.get("alienrpg-homebrew", "JournalFontColour"))
+	if (game.settings.get("alienrpg-homebrew", "switchJournalColour")) {
 		r.style.setProperty("--journalback", "#000000")
 	}
-	if (game.settings.get("alienrpg", "switchchatbackground")) {
+	if (game.settings.get("alienrpg-homebrew", "switchchatbackground")) {
 		r.style.setProperty("--chatbackground", `url('../images/chat-middle.png')`)
 	}
 
-	AlienConfig.toggleConfigButton(JSON.parse(game.settings.get("alienrpg", "addMenuButton")))
+	AlienConfig.toggleConfigButton(JSON.parse(game.settings.get("alienrpg-homebrew", "addMenuButton")))
 
 	// Set turnmarker to the Alien symbol
 	if (game.settings.get("core", "combatTrackerConfig").turnMarker.src.length === 0) {
@@ -406,7 +406,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 		"preferred",
 	)
 
-	dice3d.addSystem({ id: "alienrpg", name: "Alien RPG - Blank" }, "preferred")
+	dice3d.addSystem({ id: "alienrpg-homebrew", name: "Alien RPG - Blank" }, "preferred")
 	dice3d.addDicePreset({
 		type: "db",
 		labels: [
@@ -418,7 +418,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 			"systems/alienrpg-homebrew/ui/DsN/alien-dice-b6.png",
 		],
 		colorset: "AlienBlack",
-		system: "alienrpg",
+		system: "alienrpg-homebrew",
 	})
 	dice3d.addDicePreset({
 		type: "ds",
@@ -431,7 +431,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 			"systems/alienrpg-homebrew/ui/DsN/alien-dice-y6.png",
 		],
 		colorset: "yellow",
-		system: "alienrpg",
+		system: "alienrpg-homebrew",
 	})
 
 	dice3d.addSystem({ id: "alienrpgf", name: "Alien RPG - Full Dice" })
@@ -620,9 +620,9 @@ function rollItemMacro(itemUuid) {
 				if (
 					oldReleaseNotes !== undefined &&
 					oldReleaseNotes !== null &&
-					oldReleaseNotes.getFlag("alienrpg", "ver") !== undefined
+					oldReleaseNotes.getFlag("alienrpg-homebrew", "ver") !== undefined
 				) {
-					currentVer = oldReleaseNotes.getFlag("alienrpg", "ver")
+					currentVer = oldReleaseNotes.getFlag("alienrpg-homebrew", "ver")
 				}
 				if (newVer === currentVer) {
 					// Up to date
@@ -660,7 +660,7 @@ function rollItemMacro(itemUuid) {
 					}
 				}
 				const newReleaseJournal = game.journal.getName(releaseNoteName)
-				await newReleaseJournal.setFlag("alienrpg", "ver", newVer)
+				await newReleaseJournal.setFlag("alienrpg-homebrew", "ver", newVer)
 
 				// Show journal
 				await newReleaseJournal.sheet.render(true, { sheetMode: "text" })

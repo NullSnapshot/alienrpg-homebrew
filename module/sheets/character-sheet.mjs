@@ -117,9 +117,9 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 		// Don't show the other tabs if only limited view
 		if (this.document.limited) return
 		// Control which parts show based on document subtype
-		switch (game.settings.get("alienrpg", "evolved")) {
+		switch (game.settings.get("alienrpg-homebrew", "evolved")) {
 			case true:
-				// {					if (game.settings.get("alienrpg", "aliencrt")) {
+				// {					if (game.settings.get("alienrpg-homebrew", "aliencrt")) {
 				// 						options.parts.push(
 				// 							"crtuicharacterheader",
 				// 							"tabs",
@@ -135,7 +135,7 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 				break
 			case false:
 				{
-					if (game.settings.get("alienrpg", "aliencrt")) {
+					if (game.settings.get("alienrpg-homebrew", "aliencrt")) {
 						options.parts.push(
 							"crtuicharacterheader",
 							"tabs",
@@ -173,7 +173,7 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 			// Necessary for formInput and formFields helpers
 			fields: this.document.schema.fields,
 			systemFields: this.document.system.schema.fields,
-			isEvolved: game.settings.get("alienrpg", "evolved"),
+			isEvolved: game.settings.get("alienrpg-homebrew", "evolved"),
 			isEnc: this.actor.type === "character" || this.actor.type === "synthetic",
 			isNPC: this.actor.system.header.npc || false,
 			isSynthetic: this.actor.type === "synthetic",
@@ -196,7 +196,7 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 
 		// Offloading context prep to a helper function
 		// await this._characterData(data);
-		if (!game.settings.get("alienrpg", "evolved")) {
+		if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 			await this.actor.checkOverwatch(context)
 		}
 		this._prepareItems(context)
@@ -259,8 +259,8 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 		// If you have sub-tabs this is necessary to change
 		const tabGroup = "primary"
 		// Default tab for first time it's rendered this session
-		const sheetType = game.settings.get("alienrpg", "aliencrt")
-		const enhanced = game.settings.get("alienrpg", "evolved")
+		const sheetType = game.settings.get("alienrpg-homebrew", "aliencrt")
+		const enhanced = game.settings.get("alienrpg-homebrew", "evolved")
 
 		switch (enhanced) {
 			case false:
@@ -769,7 +769,7 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 		const itemId = target.dataset.itemId
 		const item = this.actor.items.get(itemId)
 		const actorID = this.actor.id
-		if (game.settings.get("alienrpg", "evolved")) {
+		if (game.settings.get("alienrpg-homebrew", "evolved")) {
 			if (event.button === 2) {
 				if (item.type === "weapon") {
 					// Trigger the item roll
@@ -945,7 +945,7 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 		}
 		function onBlur(e) {
 			const value = localStringToNumber(e.target.value)
-			if (game.settings.get("alienrpg", "dollar"))
+			if (game.settings.get("alienrpg-homebrew", "dollar"))
 				e.target.value = value
 					? Intl.NumberFormat("en-EN", {
 							style: "currency",
@@ -1067,7 +1067,7 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 		event.stopPropagation() // Don't trigger other events
 		if (event.detail > 1) return // Ignore repeated clicks
 		const dataset = target.dataset
-		if (!game.settings.get("alienrpg", "evolved")) {
+		if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 			if (event.button === 2) {
 				await this.actor.rollPanicMod(this.actor, dataset)
 			} else {
@@ -1125,7 +1125,7 @@ export default class alienrpgCharacterSheet extends api.HandlebarsApplicationMix
 		temp3 = game.i18n.localize(langTemp)
 
 
-				if (!game.settings.get("alienrpg", "evolved")) {
+				if (!game.settings.get("alienrpg-homebrew", "evolved")) {
 		try {
 			item = game.items.getName(dataset.pmbut)
 			str = item.name

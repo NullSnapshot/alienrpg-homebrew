@@ -50,7 +50,7 @@ export default class AlienRPGCombat extends foundry.documents.Combat {
 				drawn++
 				updates.push({ _id: id, initiative: broll.total })
 
-				if (!game.settings.get("alienrpg", "alienrpgHideInitChat")) {
+				if (!game.settings.get("alienrpg-homebrew", "alienrpgHideInitChat")) {
 					let cardPath = `<div style="text-align: center;"><img width="125" height="175" src="systems/alienrpg-homebrew/images/cards/card-${broll.total}.png"></div>`
 					// Determine the roll mode
 					const rollMode = messageOptions.rollMode || game.settings.get("core", "rollMode")
@@ -107,7 +107,7 @@ export default class AlienRPGCombat extends foundry.documents.Combat {
 				// if ((combatant.token.hidden || combatant.hidden) && rollMode === 'publicroll') {
 				// 	rollMode = 'gmroll';
 				// }
-				if (!game.settings.get("alienrpg", "alienrpgHideInitChat")) {
+				if (!game.settings.get("alienrpg-homebrew", "alienrpgHideInitChat")) {
 					if (!combatant.token.hidden || !combatant.hidden) {
 						messageData = foundry.utils.mergeObject(
 							{

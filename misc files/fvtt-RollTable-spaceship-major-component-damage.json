@@ -144,14 +144,14 @@
     },
     "exportSource": {
       "world": "1-alien-spacecraft",
-      "system": "alienrpg",
+      "system": "alienrpg-homebrew",
       "coreVersion": "10.291",
       "systemVersion": "3.0.6"
     }
   },
   "description": "",
   "_stats": {
-    "systemId": "alienrpg",
+    "systemId": "alienrpg-homebrew",
     "systemVersion": "3.0.6",
     "coreVersion": "10.291",
     "createdTime": 1661954251130,

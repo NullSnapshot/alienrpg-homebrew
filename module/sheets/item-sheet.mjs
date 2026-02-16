@@ -164,7 +164,7 @@ export default class alienrpgItemSheet extends api.HandlebarsApplicationMixin(sh
 			// Adding system and flags for easier access
 			system: this.item.system,
 			flags: this.item.flags,
-			isEvolved: game.settings.get("alienrpg", "evolved"),
+			isEvolved: game.settings.get("alienrpg-homebrew", "evolved"),
 
 			// Adding a pointer to CONFIG.ALIENRPG
 			config: CONFIG.ALIENRPG,
@@ -944,7 +944,7 @@ export default class alienrpgItemSheet extends api.HandlebarsApplicationMixin(sh
 		}
 		function onBlur(e) {
 			const value = localStringToNumber(e.target.value)
-			if (game.settings.get("alienrpg", "dollar"))
+			if (game.settings.get("alienrpg-homebrew", "dollar"))
 				e.target.value = value
 					? Intl.NumberFormat("en-EN", {
 							style: "currency",
