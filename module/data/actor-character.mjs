@@ -292,6 +292,7 @@ export default class alienrpgCharacter extends alienrpgActorBase {
 			agl: 0,
 			emp: 0,
 			wit: 0,
+			psy: 0,
 			health: 0,
 			stress: 0,
 			resolve: 0,
@@ -310,6 +311,9 @@ export default class alienrpgCharacter extends alienrpgActorBase {
 			observation: 0,
 			survival: 0,
 			comtech: 0,
+			willpower: 0,
+			cryptaethesia: 0,
+			thaumaturgy: 0,
 		}
 		let totalAc = 0
 		let totalWat = 0
@@ -368,6 +372,9 @@ export default class alienrpgCharacter extends alienrpgActorBase {
 							case "stress":
 								attrMod.stress = attrMod.stress += Number(aAttrib.value)
 								break
+								case "psy":
+									attrMod.psy = attrMod.psy += Number(aAttrib.value)
+									break
 
 							default:
 								break
@@ -413,6 +420,12 @@ export default class alienrpgCharacter extends alienrpgActorBase {
 							case "comtech":
 								sklMod.comtech = sklMod.comtech += Number(sAttrib.value)
 								break
+							case "willpower":
+								sklMod.willpower = sklMod.willpower += Number(sAttrib.value)
+							case "cryptaethesia":
+								sklMod.cryptaethesia = sklMod.cryptaethesia += Number(sAttrib.value)
+							case "thaumaturgy":
+									sklMod.thaumaturgy = sklMod.thaumaturgy += Number(sAttrib.value)
 
 							default:
 								break

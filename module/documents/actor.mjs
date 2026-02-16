@@ -1944,6 +1944,9 @@ export class alienrpgActor extends Actor {
 						"system.modifiers.skills.stamina.value": stamina,
 						"system.modifiers.skills.comtech.value": comtech,
 						"system.modifiers.skills.command.value": command,
+						"system.modifiers.skills.willpower.value": willpower,
+						"system.modifiers.skills.cryptaethesia.value": crypaethesia,
+						"system.modifiers.skills.thaumaturgy.value": thaumaturgy,
 					}
 
 					await this.createEmbeddedDocuments("Item", [rollData])

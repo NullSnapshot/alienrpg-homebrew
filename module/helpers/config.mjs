@@ -10,6 +10,7 @@ ALIENRPG.attributes = {
 	wit: "ALIENRPG.AbilityWit",
 	agl: "ALIENRPG.AbilityAgl",
 	emp: "ALIENRPG.AbilityEmp",
+	psy: "ALIENRPG.AbilityPsy",
 }
 ALIENRPG.modifiers = {
 	str: "ALIENRPG.AbilityStr",
@@ -61,6 +62,9 @@ ALIENRPG.skills = {
 	observation: { name: "ALIENRPG.Skillobservation", attrib: "wit" },
 	survival: { name: "ALIENRPG.Skillsurvival", attrib: "wit" },
 	comtech: { name: "ALIENRPG.Skillcomtech", attrib: "wit" },
+	willpower: { name: "ALIENRPG.Skillwillpower", attrib: "psy" },
+	cryptaethesia: { name: "ALIENRPG.Skillcryptaethesia", attrib: "psy" },
+	thaumaturgy: { name: "ALIENRPG.Skillthaumaturgy", attrib: "psy" },
 }
 ALIENRPG.general = {
 	career: "ALIENRPG.Career",
@@ -450,6 +454,9 @@ ALIENRPG.skills_list = {
 	10: { key: "Observation", label: "ALIENRPG.Skillobservation" },
 	11: { key: "Survival", label: "ALIENRPG.Skillsurvival" },
 	12: { key: "Comtech", label: "ALIENRPG.Skillcomtech" },
+	13: { key: "Willpower", label: "ALIENRPG.Skillwillpower" },
+	14: { key: "Cryptaethesia", label: "ALIENRPG.Skillcryptaethesia" },
+	15: { key: "Thaumaturgy", label: "ALIENRPG.Skillthaumaturgy" },
 }
 
 ALIENRPG.ship_weapon_type_list = {
